@@ -40,20 +40,11 @@ This directory contains the following components:
      - `classifier/`: TensorFlow.js-exported Neural Network binary classifier.
      - `popup/`: Files for the extension's popup user interface.
 
-2. **`datasets/`**  
-   - Contains the datasets used for training and testing the binary classifier.
-
-3. **`evaluation/`**  
-   - Files related to evaluating the performance of the developed ad blocker and comparison tools.
-   - Key files:
-     - `eval.py`: Python script for evaluating ad blockers using a Selenium-based web crawler. (You will need to update the WEBDRIVER_PATH to run the script)
-     - `tranco.csv`: List of the top 100 websites (ranked by Tranco) used for performance evaluation.
-
-4. **`Model_Training.ipynb`**  
+2. **`Model_Training.ipynb`**  
    - Jupyter notebook (designed for Google Colab) used to train and tune the binary classifier models.
    - Recommended to run on a GPU-enabled environment for faster performance.
 
-5. **`requirements.txt`**  
-   - List of Python packages required to run `eval.py` and `Model_Training.ipynb`.
+3. **`requirements.txt`**  
+   - List of Python packages required to run `Model_Training.ipynb`.
 
 ---
