@@ -1,0 +1,124 @@
+body {
+  width: 200px;
+  min-height: 150px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa; /* Light for better contrast */
+  color: #212529; /* Dark text for better readability */
+  line-height: 1.5;
+}
+
+.container {
+  padding: 15px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.125rem; /* 18px in rem units */
+  margin: 0 0 1.25rem 0; /* 20px in rem units */
+  color: #1a365d; /* Dark blue for better contrast */
+  font-weight: 600; /* High weight for better readability */
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+.toggle-label {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  color: #212529;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.125rem;
+  height: 1.5rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #6c757d; /* Medium gray for better contrast */
+  transition: .4s;
+  border-radius: 1.5rem; /* 24px */
+  outline: 2px solid transparent; /* Prep for focus state */
+  outline-offset: 2px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:focus-visible + .slider {
+  outline: 2px solid #0d6efd; /* Blue focus indicator */
+  outline-offset: 2px;
+}
+
+input:checked + .slider {
+  background-color: #198754; /* Dark green for better contrast */
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.625rem); /* 26px */
+}
+
+.counter-container {
+  background-color: #1a365d; /* Dark blue for better contrast */
+  color: white;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+}
+
+.counter-number {
+  font-size: 1.75rem; /* 28px */
+  font-weight: 700; /* High weight for better readability */
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.counter-label {
+  font-size: 0.75rem; /* 12px */
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .counter-container {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  input:checked + .slider {
+    background-color: #006400;
+  }
+}
